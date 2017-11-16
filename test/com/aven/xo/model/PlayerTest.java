@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class PlayerTest {
 
     @Test
-    void getName() {
+    void getName() throws Exception {
         final String inputValue = "Akmal";
         final String expectedValue = inputValue;
         final Player player = new Player(inputValue, null);
@@ -18,7 +18,7 @@ class PlayerTest {
     }
 
     @Test
-    void getFigure() {
+    void getFigure() throws Exception {
         final Figure inputValue = Figure.X;
         final Figure expectedValue = inputValue;
         final Player player = new Player(null, inputValue);
