@@ -1,5 +1,7 @@
 package com.aven.xo.model;
 
+import com.aven.xo.model.exceptions.AlreadyOccupiedException;
+import com.aven.xo.model.exceptions.InvalidPointException;
 import org.junit.jupiter.api.Test;
 
 import java.awt.*;
@@ -8,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class FieldTest {
     @Test
-    void getSize() {
+    void getSize() throws Exception {
         final int expectedValue = 3;
 
         final Field field = new Field();
@@ -17,7 +19,7 @@ class FieldTest {
     }
 
     @Test
-    void setFigure() {
+    void setFigure() throws Exception {
         final Field field = new Field();
         Point point = new Point(0, 0);
         final Figure figure = Figure.X;
