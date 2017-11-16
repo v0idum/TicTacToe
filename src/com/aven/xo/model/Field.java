@@ -19,7 +19,8 @@ public class Field {
         return FIELD_SIZE;
     }
 
-    public Figure getFigure(final Point point) throws InvalidPointException, AlreadyOccupiedException {
+    public Figure getFigure(final Point point) throws InvalidPointException,
+                                                    AlreadyOccupiedException {
         if (!checkPoint(point)) {
             throw new InvalidPointException();
         }
@@ -27,7 +28,8 @@ public class Field {
         return field[point.x][point.y];
     }
 
-    public void setFigure(final Point point, final Figure figure) throws InvalidPointException, AlreadyOccupiedException {
+    public void setFigure(final Point point, final Figure figure) throws InvalidPointException,
+                                                                        AlreadyOccupiedException {
         if (!checkPoint(point)) {
             throw new InvalidPointException();
         }
@@ -43,7 +45,7 @@ public class Field {
     }
 
     private boolean checkCoordinate(final int coordinate) {
-        return coordinate >= MIN_COORDINATE && coordinate <= 2;
+        return coordinate >= MIN_COORDINATE && coordinate <= MAX_COORDINATE;
     }
 
 }
