@@ -1,6 +1,5 @@
 package com.aven.xo.model;
 
-import com.aven.xo.model.exceptions.AlreadyOccupiedException;
 import com.aven.xo.model.exceptions.InvalidPointException;
 
 import java.awt.*;
@@ -22,8 +21,7 @@ public class Field {
         return fieldSize;
     }
 
-    public Figure getFigure(final Point point) throws InvalidPointException,
-                                                    AlreadyOccupiedException {
+    public Figure getFigure(final Point point) throws InvalidPointException {
         if (!checkPoint(point)) {
             throw new InvalidPointException();
         }
