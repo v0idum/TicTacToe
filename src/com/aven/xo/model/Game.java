@@ -22,7 +22,7 @@ public class Game {
         return field;
     }
 
-    public static String getGameName() {
+    public String getGameName() {
         return GAME_NAME;
     }
 
